@@ -7,7 +7,10 @@ import com.moneyhad.dto.VerifyOtpRequest;
 import com.moneyhad.dto.LoginRequest;
 import com.moneyhad.dto.LoginResponse;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://moneyhad-ai.vercel.app"
+})
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
