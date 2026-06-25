@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: moneyhad-ai
+    runtime: java
+    rootDir: backend/moneyhad
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+
+      - key: SPRING_MAIL_USERNAME
+        sync: false
+
+      - key: SPRING_MAIL_PASSWORD
+        sync: false
+
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: update
