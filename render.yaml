@@ -1,7 +1,7 @@
 services:
   - type: web
     name: moneyhad-ai
-    runtime: java
+    env: java
     rootDir: backend/moneyhad
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/*.jar
